@@ -1,0 +1,10 @@
+name: Call External API
+
+on:
+  push:
+    branches:
+      - Test
+
+jobs:
+  call-api:
+    uses: ./.github/workflows/testing.yml
