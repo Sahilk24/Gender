@@ -1,6 +1,9 @@
 name: Call External API
 
 on:
+  push:
+    branches:
+      - Dev
   workflow_dispatch:
 
 jobs:
