@@ -1,7 +1,7 @@
 name: Call External API
 
 on:
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   call-api:
