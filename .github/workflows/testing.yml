@@ -1,4 +1,4 @@
-name: Call External API
+name: TestingOne
 
 on:
   workflow_call:
