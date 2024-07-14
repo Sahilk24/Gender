@@ -1,0 +1,24 @@
+name: Call Simple Feature
+
+on:
+  push:
+    branches:
+      - Dev
+  workflow_dispatch:
+
+jobs:
+  call-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Make HTTPS call to external API
+        env:
+          API_URL: 'https://api.restful-api.dev/objects'  # Replace with your API endpoint
+          #API_KEY: ${{ secrets.API_KEY }}  # Assuming you have stored your API key as a secret
+        run: |
+          response=$(curl -s -X GET "$API_URL")
+          echo "Response: $response"
+
+      - name: Process API response
+        run: echo "Processing API response..."
+        # Add commands here to process the API response if needed
