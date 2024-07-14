@@ -1,9 +1,8 @@
 name: Tester
 
 on:
-  push:
-    branches:
-      - Test
+  workflow_dispatch:
+      
 
 jobs:
   call-api:
