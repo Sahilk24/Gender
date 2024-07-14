@@ -1,0 +1,9 @@
+name: Tester
+
+on:
+  workflow_dispatch:
+      
+
+jobs:
+  call-api:
+    uses: ./.github/workflows/testing.yml
