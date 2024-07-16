@@ -2,8 +2,15 @@ name: Tester
 
 on:
   workflow_dispatch:
+    inputs:
+      sahil:
+        type: string
+        default: khan
+  
       
 
 jobs:
   call-api:
     uses: ./.github/workflows/testing.yml
+    with:
+      checker: "sah${{inputs.sahil}}"
