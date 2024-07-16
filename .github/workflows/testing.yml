@@ -2,6 +2,11 @@ name: TestingOne
 
 on:
   workflow_call:
+    inputs:
+      checker:
+        required: true
+        type: string
+        
 
 jobs:
   call-api:
@@ -17,5 +22,5 @@ jobs:
           echo "Response: $response"
 
       - name: Process API response
-        run: echo "Processing API response..."
+        run: echo "Processing API response... ${{inputs.checker}}"
         # Add commands here to process the API response if needed
